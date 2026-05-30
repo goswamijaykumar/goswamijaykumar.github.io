@@ -1075,3 +1075,12 @@ img { max-width: 100%; display: block; }
   margin-top: 3.5rem;
 }
 .show-all-wrap .btn { cursor: pointer; }
+
+/* Keep the horizontal gutter on .wrap even when it shares an element with a
+   padding-setting class (.section, .project-page-hero). Their `padding: x 0`
+   shorthand was zeroing the left/right gutter on every subpage, so body text
+   ran edge-to-edge on mobile. Longhands declared last win the cascade. */
+.wrap {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
