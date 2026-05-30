@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Digital Twin of 3D Printer | Jay Goswami</title>
+  <title>Biotech Instrumentation @ Breaking Inc. | Jay Goswami</title>
   <meta name="description"
-    content="A real-time Unity digital twin of a 3D printer I built with a Raspberry Pi 4, Flask, M114 G-code and C#.">
+    content="Mechatronics internship at Breaking Inc. I designed and built a biotech device with optical sensing and embedded closed-loop control, plus a precision heat chamber stable to ±0.5°C.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Digital Twin of 3D Printer | Jay Goswami">
-  <meta property="og:description" content="A real-time digital twin of a 3D printer I built in Unity.">
-  <meta property="og:image" content="https://www.jaygoswami.com/printer/SS1.png">
+  <meta property="og:title" content="Biotech Instrumentation @ Breaking Inc. | Jay Goswami">
+  <meta property="og:description" content="Optical sensing + embedded closed-loop control biotech device and a precision thermal chamber, built from scratch.">
+  <meta property="og:image" content="https://www.jaygoswami.com/Breaking/breaking-1.svg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="canonical" href="https://www.jaygoswami.com/pages/printer.html">
+  <link rel="canonical" href="https://www.jaygoswami.com/pages/breaking.html">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://img.icons8.com/?size=100&id=4m1WFHgjx88b&format=png&color=000000">
 
@@ -51,24 +51,26 @@
     <div class="wrap project-page-hero">
       <a href="../index.html#work" class="back-link"><span class="arrow">←</span> All work</a>
       <div class="project-page-meta">
-        <span class="accent">[03]</span>
+        <span class="accent">[01]</span>
         <span class="sep"></span>
-        <span>Digital Twin · Research</span>
+        <span>Mechatronics · Biotech Hardware</span>
         <span class="sep"></span>
-        <span>2023</span>
+        <span>2025</span>
         <span class="sep"></span>
-        <span>UNITY × FLASK × RPI</span>
+        <span>BREAKING INC · CAMBRIDGE, MA</span>
       </div>
-      <h1 class="project-page-title">Unity-based <em>Digital Twin</em> for 3D printers.</h1>
+      <h1 class="project-page-title">Biotech <em>Instrumentation</em>.</h1>
       <p class="project-page-summary">
-        A 3D model of a working printer that stays in sync in real time, driven by a Raspberry Pi 4,
-        a Flask server, M114 G-code streaming, and a custom C# visualizer in Unity.
+        Six months as a mechatronics intern, building lab hardware from scratch. An
+        optical-sensing device with embedded <strong>closed-loop control</strong>, and a
+        precision <strong>heat chamber</strong> for plastic-degradation studies.
       </p>
     </div>
 
     <div class="wrap">
+      <!-- HERO IMAGE: replace ../Breaking/breaking-1.svg with your photo (e.g. ../Breaking/breaking-1.jpeg) -->
       <div class="project-page-image">
-        <img src="../printer/SS1.png" alt="3D Printer Digital Twin">
+        <img src="../Breaking/breaking.jpeg" alt="Biotech instrumentation built at Breaking Inc.">
         <span class="corner tl"></span><span class="corner tr"></span>
         <span class="corner bl"></span><span class="corner br"></span>
       </div>
@@ -77,49 +79,55 @@
     <div class="wrap">
       <div class="specs-grid">
         <div class="spec">
-          <div class="spec-label">Position</div>
-          <div class="spec-value">Researcher<br><span class="muted">Independent research</span></div>
+          <div class="spec-label">Role</div>
+          <div class="spec-value">Mechatronics /<br><span class="muted">Robotics Intern</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Year</div>
-          <div class="spec-value">2023</div>
+          <div class="spec-label">Timeline</div>
+          <div class="spec-value">Jul to Dec 2025<br><span class="muted">Cambridge, MA</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Domain</div>
-          <div class="spec-value">Digital Twin<br><span class="muted">Additive manufacturing</span></div>
+          <div class="spec-value">Biotech Hardware<br><span class="muted">Lab instrumentation</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Stack</div>
-          <div class="spec-value">Unity · C#<br><span class="muted">Flask · Raspberry Pi 4B · M114</span></div>
+          <div class="spec-value">Embedded · Control<br><span class="muted">Optical sensing · Thermal</span></div>
         </div>
       </div>
     </div>
 
     <div class="wrap section">
       <div class="project-body">
-        <!-- To add a new section, duplicate one of the <section>...</section> blocks below. Available styles: h2 (with optional <em>), h3, p, ul, .callout, .award, .inline-image. -->
         <section>
           <h2>The <em>brief</em>.</h2>
-          <p>This was a research project I called <strong>"Unity-Based Digital Twin for 3D Printers."</strong> The question was simple: can a digital twin track a 3D printer well enough to be useful? My goal was a Unity application that holds a live, synchronized model of a real printer.</p>
-          <p>I used a Raspberry Pi 4 and a Flask server on the local network to keep updating the printer's XYZ coordinates in its virtual copy. <strong>M114 G-code</strong> gave me the positional data, and a C# script in Unity drew it. The interesting problems were network latency and keeping the two sides in sync. The end result tracks the printer's motion closely enough to support remote monitoring, diagnosis, and eventually control.</p>
+          <p>I joined <strong>Breaking Inc.</strong> as a mechatronics intern and owned hardware from the first sketch to a build the scientists could actually run experiments on. The work crossed mechanical design, electronics, embedded firmware, and closed-loop control, and it moved fast. Prototype, measure, fix, repeat.</p>
+          <div class="callout">// scope: optical-sensing device · precision thermal chamber · embedded control</div>
         </section>
 
         <section>
-          <h2><em>Methodology</em>.</h2>
-          <p>Getting accurate data in real time came down to two things: the Flask server moving data cleanly, and the right G-codes to read the printer's motion.</p>
+          <h2>Optical-sensing <em>device</em>.</h2>
+          <p>I built the device from a blank page, pairing <strong>optical sensing</strong> with embedded control. After a good number of prototype cycles, the closed-loop system held <strong>±0.02 OD₆₀₀ accuracy</strong>, tight enough to trust the readings.</p>
           <ul>
-            <li>I wrote two API endpoints, one for position and one for temperature, so the data arrived accurate and on time.</li>
-            <li>The Unity app was the front end, turning the live data into a real-time 3D model of the print.</li>
-            <li>I set up the Raspberry Pi 4B and got a stable connection to the printer.</li>
-            <li>A custom C# script wired the API endpoints into Unity so the virtual model updated as the printer moved.</li>
+            <li>Optical front-end paired with microcontroller-based acquisition and control.</li>
+            <li>Closed-loop control algorithms for stable, repeatable readings.</li>
+            <li>A tight prototyping loop (design, build, measure, refine) on the way to a lab-ready unit.</li>
           </ul>
-          <div class="callout">// pipeline: printer → M114 G-code → Flask API → Unity (C#) → 3D twin</div>
         </section>
 
         <section>
-          <h2><em>Results</em>.</h2>
-          <p>I tested it hard, and the physical printer and its twin stayed lined up. The model tracked both the motion and the environment, which made it a usable tool for watching and controlling a print in real time.</p>
-          <p>That opens a door to <strong>predictive maintenance</strong> and <strong>process optimization</strong> in 3D printing. Next steps could add machine-learning models for prediction and extend the same approach to other machines, which is where this gets interesting for smart manufacturing.</p>
+          <h2>Precision <em>heat chamber</em>.</h2>
+          <p>I engineered a precision heat chamber for plastic-degradation studies. I picked the materials, designed the enclosure geometry, and validated <strong>thermal stability at ±0.5 °C</strong> across repeated test cycles.</p>
+          <ul>
+            <li>Material selection and enclosure geometry for uniform, stable heating.</li>
+            <li>Thermal validation across repeated cycles to confirm ±0.5 °C stability.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><em>Integration</em> &amp; impact.</h2>
+          <p>Both builds came down to getting sensors, microcontrollers, and closed-loop control working together as prototypes the lab could rely on. That improved reproducibility and cut data-acquisition time by <strong>40%</strong>.</p>
+          <div class="award">▣ Result: ±0.02 OD₆₀₀ accuracy · ±0.5 °C thermal stability · 40% faster data acquisition</div>
         </section>
       </div>
     </div>
@@ -128,24 +136,21 @@
       <div class="section-header">
         <div>
           <div class="section-eyebrow">Gallery</div>
-          <h2 class="section-title">Build <em>artifacts</em>.</h2>
+          <h2 class="section-title">From the <em>bench</em>.</h2>
         </div>
+        <div class="section-meta">[ ADD PHOTOS ]</div>
       </div>
       <div class="gallery gallery--2col">
-        <div class="gallery-item">
-          <img src="../printer/3D-8.jpeg" alt="3D printer rig" loading="lazy">
+        <div class="gallery-item feature">
+          <img src="../Breaking/breaking.jpeg" alt="Optical sensing device" loading="lazy">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         </div>
         <div class="gallery-item">
-          <img src="../printer/DT.png" alt="Unity twin view" loading="lazy">
+          <img src="../Breaking/g1.jpeg" alt="Precision heat chamber" loading="lazy">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         </div>
         <div class="gallery-item">
-          <img src="../printer/SS.png" alt="Twin screenshot" loading="lazy">
-          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        </div>
-        <div class="gallery-item">
-          <img src="../printer/3D-V.gif" alt="Twin animation" loading="lazy">
+          <img src="../Breaking/g3.jpeg" alt="Embedded control board" loading="lazy">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         </div>
       </div>
@@ -159,25 +164,25 @@
         </div>
       </div>
       <div class="up-next">
-        <a href="isro.html" class="up-next-card">
-          <img src="../isro/DT-2.jpeg" alt="ISRO Digital Twin" loading="lazy">
+        <a href="navigation.html" class="up-next-card">
+          <img src="../Navigation/hero.jpeg" alt="Navigation and SLAM" loading="lazy">
           <div class="up-next-info">
-            <div class="up-next-cat">Digital Twin · ISRO</div>
-            <div class="up-next-title">Thermo-Vacuum Chamber DT</div>
+            <div class="up-next-cat">Autonomous Systems</div>
+            <div class="up-next-title">Navigation &amp; SLAM</div>
           </div>
         </a>
-        <a href="asrs.html" class="up-next-card">
-          <img src="../ASRS/Main view.jpeg" alt="ASRS" loading="lazy">
+        <a href="biped.html" class="up-next-card">
+          <img src="../Biped/b2.jpeg" alt="Bi-Pedal robot" loading="lazy">
           <div class="up-next-info">
-            <div class="up-next-cat">Warehouse Automation</div>
-            <div class="up-next-title">Development of ASRS</div>
+            <div class="up-next-cat">Humanoid Research</div>
+            <div class="up-next-title">14 DoF Bi-Pedal Robot</div>
           </div>
         </a>
-        <a href="sm.html" class="up-next-card">
-          <img src="../SM/SM_72.jpeg" alt="SM Kit" loading="lazy">
+        <a href="pros.html" class="up-next-card">
+          <img src="../Prosthetics/Pro-1.jpeg" alt="Prosthetic limb" loading="lazy">
           <div class="up-next-info">
-            <div class="up-next-cat">Industrial Automation</div>
-            <div class="up-next-title">Smart Manufacturing Kit</div>
+            <div class="up-next-cat">Assistive Robotics</div>
+            <div class="up-next-title">Smart Prosthetic Limb</div>
           </div>
         </a>
       </div>
@@ -201,13 +206,11 @@
         <div class="footer-col">
           <h4>More Projects</h4>
           <ul class="footer-links">
-            <li><a href="asrs.html">Development of ASRS</a></li>
-            <li><a href="sm.html">Smart Manufacturing Kit</a></li>
-            <li><a href="isro.html">ISRO Digital Twin</a></li>
-            <li><a href="bio.html">Bio-Inspired Gripper</a></li>
-            <li><a href="pros.html">Prosthetic Limb</a></li>
-            <li><a href="ros.html">Janitorial Robot (ROS)</a></li>
+            <li><a href="navigation.html">Navigation &amp; SLAM</a></li>
             <li><a href="biped.html">14 DoF Bi-Pedal Robot</a></li>
+            <li><a href="pros.html">Prosthetic Limb</a></li>
+            <li><a href="asrs.html">Development of ASRS</a></li>
+            <li><a href="isro.html">ISRO Digital Twin</a></li>
           </ul>
         </div>
       </div>
@@ -216,7 +219,7 @@
         <span>Imagined by Jay Goswami · Coded with <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a></span>
       </div>
       <div class="footer-build">
-        <span class="accent">●</span> CASE_STUDY: DT3-03 &nbsp; · &nbsp; STATUS: PUBLISHED &nbsp; · &nbsp; REV.A
+        <span class="accent">●</span> CASE_STUDY: BRK-09 &nbsp; · &nbsp; STATUS: PUBLISHED &nbsp; · &nbsp; REV.A
       </div>
     </div>
   </footer>

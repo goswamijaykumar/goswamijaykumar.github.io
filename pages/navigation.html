@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Digital Twin of 3D Printer | Jay Goswami</title>
+  <title>Navigation &amp; SLAM on an Autonomous Vehicle | Jay Goswami</title>
   <meta name="description"
-    content="A real-time Unity digital twin of a 3D printer I built with a Raspberry Pi 4, Flask, M114 G-code and C#.">
+    content="ROS2 navigation and SLAM on an autonomous vehicle. Custom C++/Python drivers, IMU/GPS sensor fusion via Extended Kalman Filter, and Fast-LIO SLAM tested on a custom Boston street dataset.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Digital Twin of 3D Printer | Jay Goswami">
-  <meta property="og:description" content="A real-time digital twin of a 3D printer I built in Unity.">
-  <meta property="og:image" content="https://www.jaygoswami.com/printer/SS1.png">
+  <meta property="og:title" content="Navigation & SLAM on an Autonomous Vehicle | Jay Goswami">
+  <meta property="og:description" content="ROS2 drivers, EKF sensor fusion, and Fast-LIO SLAM on a custom Boston street dataset.">
+  <meta property="og:image" content="https://www.jaygoswami.com/Navigation/hero.svg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="canonical" href="https://www.jaygoswami.com/pages/printer.html">
+  <link rel="canonical" href="https://www.jaygoswami.com/pages/navigation.html">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://img.icons8.com/?size=100&id=4m1WFHgjx88b&format=png&color=000000">
 
@@ -51,24 +51,26 @@
     <div class="wrap project-page-hero">
       <a href="../index.html#work" class="back-link"><span class="arrow">←</span> All work</a>
       <div class="project-page-meta">
-        <span class="accent">[03]</span>
+        <span class="accent">[02]</span>
         <span class="sep"></span>
-        <span>Digital Twin · Research</span>
+        <span>Autonomous Systems · Robotics</span>
         <span class="sep"></span>
-        <span>2023</span>
+        <span>2024</span>
         <span class="sep"></span>
-        <span>UNITY × FLASK × RPI</span>
+        <span>BOSTON, MA</span>
       </div>
-      <h1 class="project-page-title">Unity-based <em>Digital Twin</em> for 3D printers.</h1>
+      <h1 class="project-page-title">Navigation &amp; <em>SLAM</em>.</h1>
       <p class="project-page-summary">
-        A 3D model of a working printer that stays in sync in real time, driven by a Raspberry Pi 4,
-        a Flask server, M114 G-code streaming, and a custom C# visualizer in Unity.
+        Localization and mapping on an autonomous vehicle. Custom ROS2 drivers,
+        <strong>IMU/GPS sensor fusion</strong> via an Extended Kalman Filter, and
+        <strong>Fast-LIO SLAM</strong> tested on a Boston street dataset I collected myself.
       </p>
     </div>
 
     <div class="wrap">
+      <!-- HERO IMAGE: replace ../Navigation/hero.svg with a point-cloud / RViz / vehicle photo -->
       <div class="project-page-image">
-        <img src="../printer/SS1.png" alt="3D Printer Digital Twin">
+        <img src="../Navigation/hero.jpeg" alt="3D point-cloud map from SLAM">
         <span class="corner tl"></span><span class="corner tr"></span>
         <span class="corner bl"></span><span class="corner br"></span>
       </div>
@@ -77,49 +79,51 @@
     <div class="wrap">
       <div class="specs-grid">
         <div class="spec">
-          <div class="spec-label">Position</div>
-          <div class="spec-value">Researcher<br><span class="muted">Independent research</span></div>
-        </div>
-        <div class="spec">
           <div class="spec-label">Year</div>
-          <div class="spec-value">2023</div>
+          <div class="spec-value">2024<br><span class="muted">Sep to Dec</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Domain</div>
-          <div class="spec-value">Digital Twin<br><span class="muted">Additive manufacturing</span></div>
+          <div class="spec-value">Autonomy / SLAM<br><span class="muted">Localization &amp; mapping</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Sensors</div>
+          <div class="spec-value">LiDAR · IMU · GPS<br><span class="muted">Sensor fusion</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Stack</div>
-          <div class="spec-value">Unity · C#<br><span class="muted">Flask · Raspberry Pi 4B · M114</span></div>
+          <div class="spec-value">ROS2 · C++ · Python<br><span class="muted">EKF · Fast-LIO</span></div>
         </div>
       </div>
     </div>
 
     <div class="wrap section">
       <div class="project-body">
-        <!-- To add a new section, duplicate one of the <section>...</section> blocks below. Available styles: h2 (with optional <em>), h3, p, ul, .callout, .award, .inline-image. -->
         <section>
           <h2>The <em>brief</em>.</h2>
-          <p>This was a research project I called <strong>"Unity-Based Digital Twin for 3D Printers."</strong> The question was simple: can a digital twin track a 3D printer well enough to be useful? My goal was a Unity application that holds a live, synchronized model of a real printer.</p>
-          <p>I used a Raspberry Pi 4 and a Flask server on the local network to keep updating the printer's XYZ coordinates in its virtual copy. <strong>M114 G-code</strong> gave me the positional data, and a C# script in Unity drew it. The interesting problems were network latency and keeping the two sides in sync. The end result tracks the printer's motion closely enough to support remote monitoring, diagnosis, and eventually control.</p>
+          <p>The goal was to push localization accuracy on an autonomous vehicle by combining classical state estimation with LiDAR-inertial SLAM, then test it on real data instead of a clean simulation. I built the sensor drivers, the fusion pipeline, and the evaluation against a Boston dataset I collected myself.</p>
+          <div class="callout">// stack: ROS2 · C++/Python drivers · EKF sensor fusion · Fast-LIO SLAM</div>
         </section>
 
         <section>
-          <h2><em>Methodology</em>.</h2>
-          <p>Getting accurate data in real time came down to two things: the Flask server moving data cleanly, and the right G-codes to read the printer's motion.</p>
+          <h2>Drivers &amp; <em>sensor fusion</em>.</h2>
+          <p>I implemented custom <strong>Python and C++ ROS2 drivers</strong> for the vehicle and fused <strong>IMU and GPS</strong> through an <strong>Extended Kalman Filter</strong> with dead reckoning, improving localization accuracy and resilience where individual sensors drift or drop out.</p>
           <ul>
-            <li>I wrote two API endpoints, one for position and one for temperature, so the data arrived accurate and on time.</li>
-            <li>The Unity app was the front end, turning the live data into a real-time 3D model of the print.</li>
-            <li>I set up the Raspberry Pi 4B and got a stable connection to the printer.</li>
-            <li>A custom C# script wired the API endpoints into Unity so the virtual model updated as the printer moved.</li>
+            <li>Custom ROS2 driver layer in both Python and C++.</li>
+            <li>IMU/GPS fusion via Extended Kalman Filter for smoother, more accurate state estimates.</li>
+            <li>Dead-reckoning fallback to bridge GPS gaps and reduce drift.</li>
           </ul>
-          <div class="callout">// pipeline: printer → M114 G-code → Flask API → Unity (C#) → 3D twin</div>
         </section>
 
         <section>
-          <h2><em>Results</em>.</h2>
-          <p>I tested it hard, and the physical printer and its twin stayed lined up. The model tracked both the motion and the environment, which made it a usable tool for watching and controlling a print in real time.</p>
-          <p>That opens a door to <strong>predictive maintenance</strong> and <strong>process optimization</strong> in 3D printing. Next steps could add machine-learning models for prediction and extend the same approach to other machines, which is where this gets interesting for smart manufacturing.</p>
+          <h2><em>SLAM</em> &amp; mapping.</h2>
+          <p>I validated <strong>Fast-LIO</strong> with loop closure on a custom-collected <strong>Boston street dataset</strong>, generating a high-fidelity <strong>3D point-cloud map</strong> used to benchmark localization accuracy against the fused estimate.</p>
+          <ul>
+            <li>LiDAR-inertial odometry (Fast-LIO) with loop closure on real street data.</li>
+            <li>A Boston dataset I collected myself, with all the real-world noise, moving objects, and GPS-degraded streets you would expect.</li>
+            <li>High-fidelity 3D point-cloud map as the benchmark reference.</li>
+          </ul>
+          <div class="award">▣ Outcome: benchmarked localization accuracy on a real-world Boston street dataset</div>
         </section>
       </div>
     </div>
@@ -128,24 +132,21 @@
       <div class="section-header">
         <div>
           <div class="section-eyebrow">Gallery</div>
-          <h2 class="section-title">Build <em>artifacts</em>.</h2>
+          <h2 class="section-title">Maps &amp; <em>runs</em>.</h2>
         </div>
+        <div class="section-meta">[ ADD PHOTOS ]</div>
       </div>
       <div class="gallery gallery--2col">
-        <div class="gallery-item">
-          <img src="../printer/3D-8.jpeg" alt="3D printer rig" loading="lazy">
+        <div class="gallery-item feature">
+          <img src="../Navigation/g1.png" alt="3D point cloud map" loading="lazy">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         </div>
         <div class="gallery-item">
-          <img src="../printer/DT.png" alt="Unity twin view" loading="lazy">
+          <img src="../Navigation/g2.png" alt="RViz EKF localization" loading="lazy">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         </div>
         <div class="gallery-item">
-          <img src="../printer/SS.png" alt="Twin screenshot" loading="lazy">
-          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        </div>
-        <div class="gallery-item">
-          <img src="../printer/3D-V.gif" alt="Twin animation" loading="lazy">
+          <img src="../Navigation/hero.jpeg" alt="Autonomous vehicle" loading="lazy">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         </div>
       </div>
@@ -159,25 +160,25 @@
         </div>
       </div>
       <div class="up-next">
-        <a href="isro.html" class="up-next-card">
-          <img src="../isro/DT-2.jpeg" alt="ISRO Digital Twin" loading="lazy">
+        <a href="breaking.html" class="up-next-card">
+          <img src="../Breaking/breaking.jpeg" alt="Breaking Inc biotech instrumentation" loading="lazy">
           <div class="up-next-info">
-            <div class="up-next-cat">Digital Twin · ISRO</div>
-            <div class="up-next-title">Thermo-Vacuum Chamber DT</div>
+            <div class="up-next-cat">Mechatronics · Biotech</div>
+            <div class="up-next-title">Biotech Instrumentation</div>
           </div>
         </a>
-        <a href="asrs.html" class="up-next-card">
-          <img src="../ASRS/Main view.jpeg" alt="ASRS" loading="lazy">
+        <a href="biped.html" class="up-next-card">
+          <img src="../Biped/b2.jpeg" alt="Bi-Pedal robot" loading="lazy">
           <div class="up-next-info">
-            <div class="up-next-cat">Warehouse Automation</div>
-            <div class="up-next-title">Development of ASRS</div>
+            <div class="up-next-cat">Humanoid Research</div>
+            <div class="up-next-title">14 DoF Bi-Pedal Robot</div>
           </div>
         </a>
-        <a href="sm.html" class="up-next-card">
-          <img src="../SM/SM_72.jpeg" alt="SM Kit" loading="lazy">
+        <a href="ros.html" class="up-next-card">
+          <img src="../ros/J-1.PNG" alt="Janitorial robot" loading="lazy">
           <div class="up-next-info">
-            <div class="up-next-cat">Industrial Automation</div>
-            <div class="up-next-title">Smart Manufacturing Kit</div>
+            <div class="up-next-cat">Autonomous Robots</div>
+            <div class="up-next-title">Janitorial Robot (ROS)</div>
           </div>
         </a>
       </div>
@@ -201,13 +202,11 @@
         <div class="footer-col">
           <h4>More Projects</h4>
           <ul class="footer-links">
-            <li><a href="asrs.html">Development of ASRS</a></li>
-            <li><a href="sm.html">Smart Manufacturing Kit</a></li>
-            <li><a href="isro.html">ISRO Digital Twin</a></li>
-            <li><a href="bio.html">Bio-Inspired Gripper</a></li>
-            <li><a href="pros.html">Prosthetic Limb</a></li>
-            <li><a href="ros.html">Janitorial Robot (ROS)</a></li>
+            <li><a href="breaking.html">Biotech Instrumentation</a></li>
             <li><a href="biped.html">14 DoF Bi-Pedal Robot</a></li>
+            <li><a href="ros.html">Janitorial Robot (ROS)</a></li>
+            <li><a href="pros.html">Prosthetic Limb</a></li>
+            <li><a href="asrs.html">Development of ASRS</a></li>
           </ul>
         </div>
       </div>
@@ -216,7 +215,7 @@
         <span>Imagined by Jay Goswami · Coded with <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a></span>
       </div>
       <div class="footer-build">
-        <span class="accent">●</span> CASE_STUDY: DT3-03 &nbsp; · &nbsp; STATUS: PUBLISHED &nbsp; · &nbsp; REV.A
+        <span class="accent">●</span> CASE_STUDY: NAV-10 &nbsp; · &nbsp; STATUS: PUBLISHED &nbsp; · &nbsp; REV.A
       </div>
     </div>
   </footer>
