@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Bio-Inspired Robot Gripper | Jay Goswami</title>
   <meta name="description"
-    content="A bio-inspired two-finger robot gripper for industrial cake production, with FEM analysis, topology optimization, and ABB Robot Studio simulation, built on exchange at Ural Federal University.">
+    content="A bio-inspired two-finger end effector for an ABB industrial arm: FEM analysis, topology optimization for a 40% mass reduction, and a full pick-and-place cycle simulated in RobotStudio.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="article">
@@ -42,7 +42,7 @@
         <a href="../index.html#work">Work</a>
         <a href="mailto:goswami.j@northeastern.edu">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <a href="../Jaykumar_Goswami_Resume_Robotics.pdf" class="nav-cv">Download CV</a>
+        <a href="../Jaykumar_Goswami_Resume.pdf" class="nav-cv">Download CV</a>
       </div>
     </div>
   </nav>
@@ -53,7 +53,7 @@
       <div class="project-page-meta">
         <span class="accent">[05]</span>
         <span class="sep"></span>
-        <span>Industrial Robotics</span>
+        <span>Mechanical Design · Industrial Robotics</span>
         <span class="sep"></span>
         <span>2023</span>
         <span class="sep"></span>
@@ -61,8 +61,9 @@
       </div>
       <h1 class="project-page-title">Bio-Inspired <em>Robot Gripper</em>.</h1>
       <p class="project-page-summary">
-        A two-finger gripper for industrial cake production. FEM-validated, topology-optimized
-        to drop 40% of its weight, and simulated on an ABB robotic arm.
+        A two-finger end effector for an ABB arm handling a payload that deforms if you grip it too hard.
+        <strong>FEM validated</strong>, <strong>topology optimized</strong> to drop 40% of its mass, and
+        simulated through a full pick-and-place cycle in RobotStudio.
       </p>
     </div>
 
@@ -77,20 +78,20 @@
     <div class="wrap">
       <div class="specs-grid">
         <div class="spec">
-          <div class="spec-label">Position</div>
-          <div class="spec-value">Summer Intern<br><span class="muted">UrFU, Russia</span></div>
+          <div class="spec-label">Role</div>
+          <div class="spec-value">End effector design<br><span class="muted">Summer intern, UrFU Russia</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Year</div>
-          <div class="spec-value">2023</div>
+          <div class="spec-label">Analysis</div>
+          <div class="spec-value">FEM<br><span class="muted">Before and after optimization</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Outcome</div>
-          <div class="spec-value">40% weight reduction<br><span class="muted">via topology optimization</span></div>
+          <div class="spec-value">40% mass reduction<br><span class="muted">via topology optimization</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Stack</div>
-          <div class="spec-value">Fusion 360 · Kompas 3D<br><span class="muted">FEM · ABB Robot Studio</span></div>
+          <div class="spec-label">Tools</div>
+          <div class="spec-value">Fusion 360 · Kompas 3D<br><span class="muted">ABB RobotStudio</span></div>
         </div>
       </div>
     </div>
@@ -101,20 +102,32 @@
         <section>
           <div class="award">★ Best Project Award, Robotics Category, UrFU 2023</div>
           <h2>The <em>brief</em>.</h2>
-          <p>This came out of a 15-day student exchange at <strong>Ural Federal University</strong> in Russia. The first week was learning Russian CAD software and visiting local factories to see how robotic arms speed up production, plus hands-on training on ABB Robot Studio.</p>
-          <p>In the second week I designed a <strong>two-finger bio-inspired robot gripper</strong> for an ABB robotic arm. I ran Finite Element Method (FEM) analyses and used topology optimization to cut the gripper's weight by <strong>40%</strong>. The design won the best-project award in the robotics category, which I will admit felt good for two weeks of work.</p>
+          <p>Design a two-finger end effector for an <strong>ABB industrial arm</strong> handling cake on a production line, and for furnace loading. Two jobs at opposite ends of the same problem: one payload deforms if you hold it too hard, the other sits in an environment that punishes anything heavier than it needs to be.</p>
+          <p>It came out of a 15-day exchange at <strong>Ural Federal University</strong>. The first week was factory visits, ABB RobotStudio training, and learning Russian CAD. The design was the second week, which is a real constraint on a design and worth saying plainly.</p>
+          <div class="callout">// two-finger end effector · FEM validated · topology optimized · ABB RobotStudio</div>
         </section>
 
         <section>
-          <h2><em>Process</em>.</h2>
-          <p>I started by sketching out a bio-inspired two-finger gripper aimed at <strong>industrial cake production</strong> and <strong>furnace loading</strong>.</p>
+          <h2>Designing for a <em>deformable payload</em>.</h2>
+          <p>A gripper for rigid parts is a force problem: clamp hard enough and friction does the rest. Cake inverts that. The grip has to be firm enough that the payload does not slip out mid-transfer, and gentle enough that it arrives intact, and those two bounds are close together.</p>
+          <p>That pushed the design toward a <strong>bio-inspired two-finger geometry</strong> that distributes contact over an area instead of concentrating it at a point, so the holding force needed for a secure grip stays under the force that damages the payload.</p>
+        </section>
+
+        <section>
+          <h2><em>FEM</em> &amp; topology optimization.</h2>
+          <p>I modelled the gripper in <strong>Fusion 360</strong>, then took it into <strong>Kompas 3D</strong> for the optimization work.</p>
           <ul>
-            <li>I designed it in Autodesk Fusion 360, then took it into Kompas 3D (Russian CAD) to make it lighter without losing function.</li>
-            <li>I ran Finite Element Method (FEM) analyses to check it would hold up under load.</li>
-            <li>To see how it would behave on a line, I modeled the assembly process in ABB Robot Studio and planned out the robot's moves.</li>
-            <li>I tuned the grip for the cake industry, where you need to hold something gently but precisely (one bad squeeze and it is not cake anymore).</li>
+            <li><strong>FEM analysis</strong> on the fingers and mounting structure to check they hold up under grip and inertial loads, and to find where material was carrying load versus just being present.</li>
+            <li><strong>Topology optimization</strong> driven by those results, removing <strong>40% of the mass</strong> while keeping the stiffness that matters at the fingertips.</li>
+            <li>Re-checked the optimized geometry under FEM rather than trusting the optimizer's output as-is.</li>
           </ul>
-          <div class="callout">// outcome: 40% lighter · FEM-validated · ABB-simulated</div>
+          <p>Mass matters more on an end effector than almost anywhere else on a robot. Every gram at the wrist is carried by every joint upstream and paid for in cycle time, so 40% off the tool is worth more than 40% off a base casting.</p>
+          <div class="callout">// 40% mass reduction · FEM validated before and after</div>
+        </section>
+
+        <section>
+          <h2>Simulating the <em>line</em>.</h2>
+          <p>A gripper that works on the bench can still be wrong for the cell. I modelled the assembly and the pick-and-place cycle in <strong>ABB RobotStudio</strong>, planning the arm's motion to check reach, approach angles, and clearance against the surrounding equipment before committing to the geometry.</p>
         </section>
       </div>
     </div>
@@ -168,7 +181,7 @@
           <img src="../ASRS/Main view.jpeg" alt="ASRS" loading="lazy">
           <div class="up-next-info">
             <div class="up-next-cat">Warehouse Automation</div>
-            <div class="up-next-title">Development of ASRS</div>
+            <div class="up-next-title">Two-Stage Telescopic ASRS</div>
           </div>
         </a>
       </div>
@@ -186,17 +199,17 @@
           <ul class="footer-links">
             <li><a href="https://www.linkedin.com/in/goswamijay/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
             <li><a href="mailto:goswami.j@northeastern.edu">goswami.j@northeastern.edu</a></li>
-            <li><a href="../Jaykumar_Goswami_Resume_Robotics.pdf">Résumé (PDF) ↗</a></li>
+            <li><a href="../Jaykumar_Goswami_Resume.pdf">Résumé (PDF) ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>More Projects</h4>
           <ul class="footer-links">
-            <li><a href="asrs.html">Development of ASRS</a></li>
+            <li><a href="asrs.html">Telescopic ASRS</a></li>
             <li><a href="sm.html">Smart Manufacturing Kit</a></li>
             <li><a href="printer.html">3D Printer Digital Twin</a></li>
             <li><a href="isro.html">ISRO Digital Twin</a></li>
-            <li><a href="pros.html">Prosthetic Limb</a></li>
+            <li><a href="pros.html">Prosthetic Hand</a></li>
             <li><a href="ros.html">Janitorial Robot (ROS)</a></li>
             <li><a href="biped.html">14 DoF Bi-Pedal Robot</a></li>
           </ul>

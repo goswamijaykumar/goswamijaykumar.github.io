@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Motorized Back Exoskeleton | Jay Goswami</title>
+  <meta name="description"
+    content="MS thesis: a powered back exoskeleton for industrial fatigue reduction. Full wearable mechanical system in SolidWorks (frame, harness, actuator mounts, cable routing), actuator adaptation with torque analysis and motor sizing, and three benchtop rigs that characterized the actuator.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Motorized Back Exoskeleton | Jay Goswami">
+  <meta property="og:description" content="Test-rig design and benchtop characterization of a cable-driven series-elastic actuator, then its integration into a back exoskeleton.">
+  <meta property="og:image" content="https://www.jaygoswami.com/exo/hero-wearing.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://www.jaygoswami.com/pages/exo.html">
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://img.icons8.com/?size=100&id=4m1WFHgjx88b&format=png&color=000000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <script>(function(){try{var s=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',s||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <link rel="stylesheet" href="../style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LZH9WJWD8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1LZH9WJWD8');
+  </script>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="logo"><span class="logo-dot"></span>Jay Goswami</a>
+      <div class="nav-links">
+        <a href="../index.html#work">Work</a>
+        <a href="mailto:goswami.j@northeastern.edu">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <a href="../Jaykumar_Goswami_Resume.pdf" class="nav-cv">Download CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap project-page-hero">
+      <a href="../index.html#work" class="back-link"><span class="arrow">←</span> All work</a>
+      <div class="project-page-meta">
+        <span class="accent">[01]</span>
+        <span class="sep"></span>
+        <span>MS Thesis · Wearable Robotics</span>
+        <span class="sep"></span>
+        <span>2026</span>
+        <span class="sep"></span>
+        <span>BOSTON, MA</span>
+      </div>
+      <h1 class="project-page-title">Motorized Back <em>Exoskeleton</em>.</h1>
+      <p class="project-page-summary">
+        My MS thesis: a powered back exoskeleton for industrial fatigue reduction. I designed the
+        <strong>full wearable mechanical system</strong> (frame, harness, actuator mounts and cable routing),
+        adapted a cable-driven actuator for industrial lifting loads, and built the benchtop rigs that
+        characterized it.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <!-- System-level and on-body shots. -->
+      <div class="project-page-image">
+        <img src="../exo/hero-wearing.jpg" alt="Wearing the v2 back exoskeleton for a fit check">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="specs-grid">
+        <div class="spec">
+          <div class="spec-label">Role</div>
+          <div class="spec-value">MS Thesis · Shepherd Lab<br><span class="muted">Full mechanical system</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Actuator</div>
+          <div class="spec-value">AK-E60-8<br><span class="muted">Integrated 8:1 planetary</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Characterization</div>
+          <div class="spec-value">3 benchtop rigs<br><span class="muted">FUTEK LSB200 · 41-ch DAQ</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Tools</div>
+          <div class="spec-value">SolidWorks<br><span class="muted">Python · moteus</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap section">
+      <div class="project-body">
+        <section>
+          <h2>The <em>brief</em>.</h2>
+          <p>Industrial lifting wears people out. The load on the lumbar spine during repeated bending is the kind of thing that does not injure anyone on a single lift and injures plenty of people over a career. A powered back exoskeleton puts some of that load somewhere else.</p>
+          <p>My thesis was to take a cable-driven actuator developed in the lab and build a wearable system around it that could deliver useful assistance during industrial lifting. Before that, I built the apparatus that characterized the actuator in the first place.</p>
+          <div class="callout">// owned: wearable mechanical system · actuator adaptation · test rigs · instrumentation</div>
+        </section>
+
+        <section>
+          <h2>Designing the <em>wearable system</em>.</h2>
+          <p>An actuator on a bench is a machine. An actuator on a person is a machine plus a fit problem, a load-path problem, and a comfort problem, and the last one decides whether the device ever gets worn. I designed the full wearable mechanical system end to end in <strong>SolidWorks</strong>.</p>
+
+          <h3>01 · Back frame</h3>
+          <p>The frame is what makes assistance useful rather than just present. It has to carry actuator reaction force into the body at places that tolerate load, stay rigid enough that assistance reaches the wearer instead of flexing the structure, and still allow the torso motion a person needs to do the job.</p>
+
+          <h3>02 · Ergonomic harness</h3>
+          <p>The harness is the interface where the whole design succeeds or fails. Assistive force has to transfer through padded contact spread over area, because pressure concentrated on a small patch stops being assistance and starts being the reason someone takes the device off after twenty minutes.</p>
+
+          <h3>03 · Actuator mounts and cable routing</h3>
+          <p>The actuator has to sit somewhere that keeps the cable path clean through the full range of bending. Cable routing on a wearable device is a moving-geometry problem: path length changes as the wearer bends, and the routing has to accommodate that without binding, chafing, or changing the effective transmission partway through a lift.</p>
+
+          <h3>04 · Torque analysis and motor sizing</h3>
+          <p>The lab actuator was not built for industrial lifting loads, so I ran a <strong>torque upgrade analysis</strong> and <strong>sized the motor</strong> for the assistance the application actually needed, then reworked the actuator to match: <strong>inverted the motor orientation</strong> and <strong>redesigned the main body and cable spool</strong> for the exoskeleton's load path and packaging.</p>
+          <h3>05 · From v1 to v2</h3>
+          <p>The first build was tethered: power and compute lived off-board, which is fine on a bench and useless anywhere a person actually works. The second version carries everything. Two <strong>20 V tool batteries</strong> and an <strong>NVIDIA Jetson</strong> mount directly to the back plate, which made the frame a structural and a packaging problem at the same time. Mass sitting high on the back is mass the wearer carries all day, so where those components sit is a design decision rather than a leftover.</p>
+          <div class="inline-image">
+            <img src="../exo/full back exo with all the components assembled.jpeg" alt="The earlier tethered v1 back exoskeleton" loading="lazy">
+          </div>
+          <div class="callout">// back frame · ergonomic harness · actuator mounts · cable routing · motor sizing · untethered v2</div>
+        </section>
+
+        <section>
+          <h2>Sensing &amp; <em>control</em>.</h2>
+          <p>The device has to know what the wearer is doing before it can help. I developed <strong>IMU and cable-length sensor fusion</strong> with control logic for real-time <strong>bend and lift detection</strong> and torque control, so assistance arrives during the lift rather than after it.</p>
+        </section>
+
+        <section>
+          <h2><em>Characterizing</em> the actuator.</h2>
+          <p>Before any of the wearable work, the actuator itself had to be measured. I designed the benchtop apparatus for that in <strong>SolidWorks</strong>, and it became three setups rather than one because the questions were different at each end of the force range.</p>
+          <ul>
+            <li><strong>Low-force setup.</strong> Cable over a load-cell pulley to a motorized perturbation source with a mechanically adjustable lever, so one rig sweeps disturbance amplitude without a rebuild.</li>
+            <li><strong>High-force setup.</strong> Cable driving a torque-sensor-instrumented lever, with a high-torque motor applying controlled perturbations under load.</li>
+            <li><strong>Linear-rail setup.</strong> Cable over a load-cell pulley to a cart on a linear rail, pushed by hand. Transparency you can feel, not just plot.</li>
+          </ul>
+          <p>Most of the design effort went into stiffness, alignment, and repeatability rather than part count. A fixture that flexes under load quietly adds itself to your results, and a rig you re-shim between runs makes two test days incomparable.</p>
+          <p>I wrote the acquisition stack in <strong>Python</strong>, logging <strong>41 channels</strong> per sample across the motor controller and load cell on a common clock, with bidirectional loading and unloading sweeps, swept-frequency disturbance profiles across a range of amplitudes, and a plotting pipeline that turns each run straight into figures.</p>
+          <div class="callout">// three rigs · 41-channel DAQ · bidirectional sweeps · amplitude-stepped disturbances</div>
+        </section>
+
+        <section>
+          <h2>Under <em>review</em>.</h2>
+          <p>The actuator design is the subject of a paper currently under peer review, so the mechanism details and measured performance are not public yet. Happy to walk through all of it in conversation.</p>
+          <div class="award">▣ Paper under review, IEEE Robotics and Automation Letters · full results on request</div>
+        </section>
+      </div>
+    </div>
+
+    <div class="wrap section" style="padding-top:0;">
+      <div class="section-header">
+        <div>
+          <div class="section-eyebrow">Gallery</div>
+          <h2 class="section-title">Rig &amp; <em>build</em>.</h2>
+        </div>
+        <div class="section-meta">[ 03 frames ]</div>
+      </div>
+      <!-- More detail shots available once the paper publishes. See .gitignore. -->
+      <div class="gallery gallery--2col">
+        <div class="gallery-item feature">
+          <img src="../exo/hero-wearing.jpg" alt="Full back exoskeleton with batteries, compute and harness assembled" loading="lazy">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        </div>
+        <div class="gallery-item">
+          <img src="../exo/actuator.jpg" alt="v2 frame and harness worn for a fit check" loading="lazy">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        </div>
+        <div class="gallery-item">
+          <img src="../exo/v1.jpg" alt="The earlier tethered v1 build" loading="lazy">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap section">
+      <div class="section-header">
+        <div>
+          <div class="section-eyebrow">Up Next</div>
+          <h2 class="section-title">Continue <em>browsing</em>.</h2>
+        </div>
+      </div>
+      <div class="up-next">
+        <a href="asrs.html" class="up-next-card">
+          <img src="../ASRS/Main%20view.jpeg" alt="Two-stage telescopic ASRS" loading="lazy">
+          <div class="up-next-info">
+            <div class="up-next-cat">Warehouse Automation</div>
+            <div class="up-next-title">Two-Stage Telescopic ASRS</div>
+          </div>
+        </a>
+        <a href="bio.html" class="up-next-card">
+          <img src="../Bio/Bio-4.jpeg" alt="Bio-inspired robot gripper" loading="lazy">
+          <div class="up-next-info">
+            <div class="up-next-cat">Industrial Robotics</div>
+            <div class="up-next-title">Bio-Inspired Gripper</div>
+          </div>
+        </a>
+        <a href="pros.html" class="up-next-card">
+          <img src="../Prosthetics/Pro-1.jpeg" alt="Smart upper prosthetic limb" loading="lazy">
+          <div class="up-next-info">
+            <div class="up-next-cat">Assistive Robotics</div>
+            <div class="up-next-title">Tendon-Driven Prosthetic Hand</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <h2 class="footer-cta">
+        Let's build <a href="mailto:goswami.j@northeastern.edu?subject=Hello!">something</a> together.
+      </h2>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Elsewhere</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/goswamijay/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="mailto:goswami.j@northeastern.edu">goswami.j@northeastern.edu</a></li>
+            <li><a href="../Jaykumar_Goswami_Resume.pdf">Résumé (PDF) ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More Projects</h4>
+          <ul class="footer-links">
+            <li><a href="asrs.html">Telescopic ASRS</a></li>
+            <li><a href="bio.html">Bio-Inspired Gripper</a></li>
+            <li><a href="pros.html">Prosthetic Hand</a></li>
+            <li><a href="breaking.html">Biotech Instrumentation</a></li>
+            <li><a href="biped.html">14 DoF Bi-Pedal Robot</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Jay Goswami</span>
+        <span>Imagined by Jay Goswami · Coded with <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a></span>
+      </div>
+      <div class="footer-build">
+        <span class="accent">●</span> CASE_STUDY: EXO-11 &nbsp; · &nbsp; STATUS: DRAFT &nbsp; · &nbsp; REV.A
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../theme.js"></script>
+</body>
+
+</html>

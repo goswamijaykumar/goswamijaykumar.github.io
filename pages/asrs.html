@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Development of ASRS | Jay Goswami</title>
+  <title>Two-Stage Telescopic ASRS | Jay Goswami</title>
   <meta name="description"
-    content="A 360 kg Automated Storage and Retrieval System I built at the Smart Manufacturing Lab, BVM, running on PLC, HMI, IIoT and OPC UA.">
+    content="Mechanical architecture of a 360 kg Automated Storage and Retrieval System: a two-stage telescopic mast driven by a single motor through a rack and pinion, with 2:1 chain reeving, validated with FEA, tolerance analysis and DFM.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Development of ASRS | Jay Goswami">
+  <meta property="og:title" content="Two-Stage Telescopic ASRS | Jay Goswami">
   <meta property="og:description"
     content="An Automated Storage and Retrieval System I built with PLC, HMI, IIoT and OPC UA.">
   <meta property="og:image" content="https://www.jaygoswami.com/ASRS/Main%20view.jpeg">
@@ -43,7 +43,7 @@
         <a href="../index.html#work">Work</a>
         <a href="mailto:goswami.j@northeastern.edu">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <a href="../Jaykumar_Goswami_Resume_Robotics.pdf" class="nav-cv">Download CV</a>
+        <a href="../Jaykumar_Goswami_Resume.pdf" class="nav-cv">Download CV</a>
       </div>
     </div>
   </nav>
@@ -52,19 +52,19 @@
     <div class="wrap project-page-hero">
       <a href="../index.html#work" class="back-link"><span class="arrow">←</span> All work</a>
       <div class="project-page-meta">
-        <span class="accent">[01]</span>
+        <span class="accent">[03]</span>
         <span class="sep"></span>
-        <span>Warehouse Automation</span>
+        <span>Mechanical Design · Warehouse Automation</span>
         <span class="sep"></span>
         <span>2024</span>
         <span class="sep"></span>
         <span>SMART MANUFACTURING LAB · BVM</span>
       </div>
-      <h1 class="project-page-title">Development of <em>ASRS</em>.</h1>
+      <h1 class="project-page-title">Two-Stage Telescopic <em>ASRS</em>.</h1>
       <p class="project-page-summary">
-        A 360 kg Automated Storage and Retrieval System built to industry standards. I handled the
-        process monitoring, control, and IIoT integration across the PLC, HMI, gateway and
-        I/O-link master layers.
+        An Automated Storage and Retrieval System built to industry standard. I owned the mechanical
+        architecture, centred on a <strong>two-stage telescopic mast</strong> driven by a single motor
+        through a rack and pinion, with <strong>2:1 chain reeving</strong> doubling the carriage travel.
       </p>
     </div>
 
@@ -79,20 +79,20 @@
     <div class="wrap">
       <div class="specs-grid">
         <div class="spec">
-          <div class="spec-label">Position</div>
-          <div class="spec-value">Junior Research Fellow<br><span class="muted">Smart Manufacturing Lab, BVM</span></div>
+          <div class="spec-label">Role</div>
+          <div class="spec-value">Mechanical architecture<br><span class="muted">Junior Research Fellow, BVM</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Year</div>
-          <div class="spec-value">2024</div>
+          <div class="spec-label">Lift</div>
+          <div class="spec-value">Two-stage telescopic<br><span class="muted">2:1 chain reeving</span></div>
+        </div>
+        <div class="spec">
+          <div class="spec-label">Drive</div>
+          <div class="spec-value">Rack &amp; pinion<br><span class="muted">Single motor · linear guides</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Capacity</div>
-          <div class="spec-value">360 kg<br><span class="muted">built to industry standard</span></div>
-        </div>
-        <div class="spec">
-          <div class="spec-label">Stack</div>
-          <div class="spec-value">PLC · HMI · OPC UA<br><span class="muted">CodeSYS · Thingworx · Kepserver</span></div>
+          <div class="spec-value">360 kg total<br><span class="muted">~10 kg per tote</span></div>
         </div>
       </div>
     </div>
@@ -102,20 +102,57 @@
         <!-- To add a new section, duplicate one of the <section>...</section> blocks below. Available styles: h2 (with optional <em>), h3, p, ul, .callout, .award, .inline-image. -->
         <section>
           <h2>The <em>brief</em>.</h2>
-          <p>The Automated Storage and Retrieval System (ASRS) carries 360 kg and was designed to meet industry standards. It does process monitoring and control across a PLC, HMI, gateway, and I/O-link master. For the Industrial Internet of Things (IIoT) side I used <strong>Thingworx</strong> and <strong>Kepserver</strong> so the system reports its state reliably on a smart manufacturing floor.</p>
-          <p>The project is still young. The design is done, and we are now moving into manufacturing.</p>
-          <div class="callout">// status: design complete · manufacturing in progress</div>
+          <p>Build an Automated Storage and Retrieval System to industry standard, <strong>360 kg of total rack capacity</strong> handled roughly <strong>10 kg at a time</strong>: store a tote, retrieve it, index the rack, and do it repeatably. I owned the <strong>mechanical architecture</strong> from concept through analysis and production handoff. The interesting problem was not the frame or the controls. It was the lift.</p>
+          <div class="callout">// owned: mechanical architecture · lift mechanism · FEA · tolerance analysis · DFM</div>
         </section>
 
         <section>
-          <h2>Skills <em>deployed</em>.</h2>
+          <h2>The <em>lifting mechanism</em>.</h2>
+          <p>An ASRS lift has a constraint that makes it more interesting than it first appears: the mast has to reach the top of the rack, but it also has to <strong>fit under the ceiling when collapsed</strong>. A single-stage mast tall enough to reach the top shelf is too tall to park. That constraint is what forces a telescoping design.</p>
+
+          <h3>01 · Two-stage telescopic mast</h3>
+          <p>I designed the lift as a <strong>two-stage telescopic mast</strong>: a fixed outer column, a moving inner stage that rises out of it, and a carriage that rises out of the inner stage. Collapsed, the whole thing is roughly half its extended height. The stages ride on <strong>linear guides</strong> so the carriage stays square to the rack under an offset load, which matters because a tote sitting out on the forks is a cantilever, not a centred weight.</p>
+
+          <h3>02 · One motor, rack and pinion</h3>
+          <p>The drive is a <strong>linear geared rail</strong>: a rack running up the fixed column with a pinion on the moving stage, driven by a <strong>single motor</strong>. Rack and pinion gives positive engagement with no slip, which is what you want for position repeatability on a rack that has to index to a specific shelf. It also holds position against gravity better than a friction drive.</p>
+
+          <h3>03 · Chain reeving for the second stage</h3>
+          <p>Driving stage one is straightforward. The question is how the carriage gets up the inner stage without a second motor, and the answer is a chain.</p>
+          <p>A <strong>sprocket sits at the top of the moving inner stage</strong>. A chain passes over it with one end anchored to the fixed frame and the other to the carriage. When the pinion drives the inner stage up by some distance, the sprocket travels with it, and because one end of the chain is tied to ground, the chain pays the carriage up by that same distance <em>relative to the stage that is already moving</em>. The carriage therefore rises <strong>twice as far as the inner stage</strong>, from one motor, with both stages moving together throughout.</p>
+          <p>This is the same 2:1 reeving used in a forklift duplex mast, where a hydraulic cylinder drives the inner mast and the chain doubles the carriage travel. Here the cylinder is replaced by the rack and pinion.</p>
+          <div class="inline-image">
+            <img src="../ASRS/up_down.png" alt="Vertical lift travel of the two-stage telescopic mast" loading="lazy">
+          </div>
+
+          <h3>04 · Chain, not belt</h3>
+          <p>The carriage lifts roughly <strong>10 kg</strong> per tote, plus its own mass, hanging off the chain for the entire lift. A toothed belt would have worked on load alone, but chain won on the things that matter over a duty cycle:</p>
           <ul>
-            <li>Industrial control programming with PLC and HMI workflows in CodeSYS</li>
-            <li>OPC UA pipelines connecting PLC, gateway and Thingworx for live data</li>
-            <li>CAD design of the storage frame, slider rails and vertical lift</li>
-            <li>Power system layout and sensor integration across rack levels</li>
-            <li>The full warehouse cycle: store, retrieve, index</li>
+            <li><strong>Strength and margin.</strong> Chain takes the working load with far more headroom, and the failure mode is progressive wear rather than a sudden tooth shear.</li>
+            <li><strong>Creep under sustained load.</strong> A belt holding a suspended load stretches over time. A chain does not, so the carriage stays where the controller thinks it is.</li>
+            <li><strong>Positive engagement.</strong> Chain and sprocket cannot skip a tooth under shock, which is what a belt does exactly once before you stop trusting your position feedback.</li>
           </ul>
+          <div class="callout">// two-stage telescopic mast · rack and pinion · 2:1 chain reeving · single motor</div>
+        </section>
+
+        <section>
+          <h2>Analysis &amp; <em>production handoff</em>.</h2>
+          <p>The design had to survive being manufactured, not just being modelled.</p>
+          <ul>
+            <li><strong>FEA</strong> on the structural members and the carriage, checking deflection under an offset load rather than only stress at the fixings.</li>
+            <li><strong>Tolerance analysis</strong> across the telescoping stages. This is where a telescopic mast is won or lost: stack up the guide clearances wrong and the mast either binds or rattles, and the fix is expensive once parts exist.</li>
+            <li><strong>DFM optimization</strong> for production handoff, working the design toward standard sections, available stock, and parts a shop can actually make.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Controls, <em>briefly</em>.</h2>
+          <p>I also built the control and monitoring layer: PLC and HMI logic in <strong>CodeSYS</strong>, an <strong>OPC UA</strong> pipeline through a gateway and I/O-link master, and <strong>Thingworx</strong> with <strong>Kepserver</strong> for IIoT reporting, so the system publishes its state to a smart manufacturing floor. The full store, retrieve and index cycle runs through it.</p>
+        </section>
+
+        <section>
+          <h2><em>Status</em>.</h2>
+          <p>Design complete and handed off; the build moved into manufacturing.</p>
+          <div class="callout">// status: design complete · manufacturing in progress</div>
         </section>
       </div>
     </div>
@@ -200,7 +237,7 @@
           <ul class="footer-links">
             <li><a href="https://www.linkedin.com/in/goswamijay/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
             <li><a href="mailto:goswami.j@northeastern.edu">goswami.j@northeastern.edu</a></li>
-            <li><a href="../Jaykumar_Goswami_Resume_Robotics.pdf">Résumé (PDF) ↗</a></li>
+            <li><a href="../Jaykumar_Goswami_Resume.pdf">Résumé (PDF) ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -210,7 +247,7 @@
             <li><a href="printer.html">3D Printer Digital Twin</a></li>
             <li><a href="isro.html">ISRO Digital Twin</a></li>
             <li><a href="bio.html">Bio-Inspired Gripper</a></li>
-            <li><a href="pros.html">Prosthetic Limb</a></li>
+            <li><a href="pros.html">Prosthetic Hand</a></li>
             <li><a href="ros.html">Janitorial Robot (ROS)</a></li>
             <li><a href="biped.html">14 DoF Bi-Pedal Robot</a></li>
           </ul>

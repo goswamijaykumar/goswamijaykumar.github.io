@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Back exoskeleton placeholder">
+  <defs>
+    <pattern id="g" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0v50" fill="none" stroke="#cbff5f" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <pattern id="G" width="250" height="250" patternUnits="userSpaceOnUse">
+      <path d="M250 0H0v250" fill="none" stroke="#cbff5f" stroke-opacity=".13" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#14141a"/>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <rect width="1600" height="1000" fill="url(#G)"/>
+
+  <g fill="none" stroke="#cbff5f" stroke-opacity=".55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- head -->
+    <circle cx="800" cy="250" r="52"/>
+    <!-- spine -->
+    <path d="M800 302v300"/>
+    <!-- shoulders / hips -->
+    <path d="M690 360h220M712 602h176"/>
+    <!-- arms -->
+    <path d="M690 360l-58 168M910 360l58 168"/>
+    <!-- legs -->
+    <path d="M712 602l-30 232M888 602l30 232"/>
+  </g>
+
+  <!-- exo frame: shoulder straps + lumbar brace -->
+  <g fill="none" stroke="#cbff5f" stroke-opacity=".95" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M726 372c-16 62-20 118-14 172M874 372c16 62 20 118 14 172"/>
+    <rect x="700" y="540" width="200" height="96" rx="18"/>
+  </g>
+
+  <!-- actuator housing -->
+  <g stroke="#cbff5f" stroke-width="4" stroke-linejoin="round">
+    <rect x="1040" y="470" width="190" height="150" rx="12" fill="#cbff5f" fill-opacity=".08"/>
+    <circle cx="1135" cy="545" r="44" fill="none"/>
+    <circle cx="1135" cy="545" r="12" fill="#cbff5f" fill-opacity=".7" stroke="none"/>
+  </g>
+
+  <!-- cable routing -->
+  <path d="M900 570c60 0 90-25 140-25" fill="none" stroke="#cbff5f" stroke-opacity=".8" stroke-width="3" stroke-dasharray="14 10"/>
+
+  <!-- callouts -->
+  <g font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="26" fill="#cbff5f" fill-opacity=".85">
+    <text x="1040" y="440">ACTUATOR</text>
+    <text x="418" y="596">LUMBAR BRACE</text>
+    <path d="M660 588H700" stroke="#cbff5f" stroke-opacity=".5" stroke-width="2"/>
+  </g>
+
+  <!-- frame corners -->
+  <g stroke="#cbff5f" stroke-opacity=".6" stroke-width="4" fill="none">
+    <path d="M60 118V60h58M1482 60h58v58M1540 882v58h-58M118 940H60v-58"/>
+  </g>
+
+  <g font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" fill="#cbff5f">
+    <text x="60" y="60" font-size="28" fill-opacity=".55" dy="-14">EXO-11 · CABLE-DRIVEN ACTUATOR</text>
+    <text x="800" y="880" font-size="34" text-anchor="middle" fill-opacity=".75" letter-spacing="4">[ PHOTO PENDING ]</text>
+  </g>
+</svg>

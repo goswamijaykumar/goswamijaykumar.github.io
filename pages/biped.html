@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>14 DoF Bi-Pedal Robot | Jay Goswami</title>
   <meta name="description"
-    content="A research project on a 14-degree-of-freedom biped robot, with custom PCB design, DC motors with encoders, and I²C multi-controller communication.">
+    content="Electronics for a 14 DoF bipedal robot: custom PCB taken from schematic capture through board layout and bring-up, DC motor and encoder integration across every joint, wiring harness layout, and distributed I²C control.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="article">
@@ -42,7 +42,7 @@
         <a href="../index.html#work">Work</a>
         <a href="mailto:goswami.j@northeastern.edu">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <a href="../Jaykumar_Goswami_Resume_Robotics.pdf" class="nav-cv">Download CV</a>
+        <a href="../Jaykumar_Goswami_Resume.pdf" class="nav-cv">Download CV</a>
       </div>
     </div>
   </nav>
@@ -51,9 +51,9 @@
     <div class="wrap project-page-hero">
       <a href="../index.html#work" class="back-link"><span class="arrow">←</span> All work</a>
       <div class="project-page-meta">
-        <span class="accent">[08]</span>
+        <span class="accent">[02]</span>
         <span class="sep"></span>
-        <span>Humanoid Research</span>
+        <span>Electronics &amp; Embedded · Humanoid Robotics</span>
         <span class="sep"></span>
         <span>2022</span>
         <span class="sep"></span>
@@ -61,8 +61,9 @@
       </div>
       <h1 class="project-page-title">14 DoF <em>Bi-Pedal</em> Robot.</h1>
       <p class="project-page-summary">
-        A 14-degree-of-freedom biped built to reproduce human walking patterns,
-        with custom PCBs, encoder-equipped DC motors, and I²C multi-controller communication.
+        A 14-degree-of-freedom biped built to reproduce human walking patterns. I designed the
+        <strong>custom PCB</strong> that drives it, selected and integrated the encoder-equipped DC motors
+        at every joint, and laid out the wiring harness for a machine that never stops moving.
       </p>
     </div>
 
@@ -77,20 +78,20 @@
     <div class="wrap">
       <div class="specs-grid">
         <div class="spec">
-          <div class="spec-label">Position</div>
-          <div class="spec-value">Research Assistant<br><span class="muted">Robotics Lab, BVM</span></div>
+          <div class="spec-label">Role</div>
+          <div class="spec-value">Electronics &amp; PCB<br><span class="muted">Research Assistant, BVM</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Year</div>
-          <div class="spec-value">2022</div>
+          <div class="spec-label">Scope</div>
+          <div class="spec-value">Schematic → bring-up<br><span class="muted">Full design cycle</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Degrees of Freedom</div>
-          <div class="spec-value">14<br><span class="muted">simulating human gait</span></div>
+          <div class="spec-label">Joints</div>
+          <div class="spec-value">14 DoF<br><span class="muted">DC motors + encoders</span></div>
         </div>
         <div class="spec">
-          <div class="spec-label">Stack</div>
-          <div class="spec-value">Custom PCBs · I²C<br><span class="muted">DC + encoders · CAD · Electronics</span></div>
+          <div class="spec-label">Architecture</div>
+          <div class="spec-value">Distributed I²C<br><span class="muted">Multi-controller</span></div>
         </div>
       </div>
     </div>
@@ -100,19 +101,36 @@
         <!-- To add a new section, duplicate one of the <section>...</section> blocks below. Available styles: h2 (with optional <em>), h3, p, ul, .callout, .award, .inline-image. -->
         <section>
           <h2>The <em>brief</em>.</h2>
-          <p>This was a long robotics project building a <strong>biped robot with 14 degrees of freedom</strong>, designed to reproduce human walking patterns. A big part of it was designing custom printed circuit boards (PCBs) for DC motors fitted with encoders.</p>
-          <p>Those motors are what give the biped precise movement. To get the control units talking to each other cleanly, I used the <strong>I²C communication protocol</strong>. The project pushed my mechanical design and PCB fabrication, and taught me a lot about how multiple controllers coordinate in a robot.</p>
+          <p>A <strong>14-degree-of-freedom biped</strong> built to reproduce human walking patterns. I owned the electronics: the custom PCB that drives it, the motor and encoder selection across every joint, and the wiring that has to survive a machine that moves.</p>
+          <p>The mechanical structure was someone else's work. Mine was everything that makes fourteen joints actually controllable from one board.</p>
+          <div class="callout">// owned: PCB design · motor &amp; encoder selection · harness layout · bring-up</div>
         </section>
 
         <section>
-          <h2>Key <em>contributions</em>.</h2>
+          <h2>Driving fourteen <em>joints</em>.</h2>
+          <p>I designed a <strong>custom PCB</strong> for the robot and took it through the full cycle: <strong>schematic capture, board layout, fabrication, and physical bring-up</strong>. Bring-up is the part that teaches you things. A board that is correct on paper still has to be probed, powered in stages, and argued with before it drives anything.</p>
+          <p>I selected and integrated <strong>DC motors with encoders at each joint</strong>. Fourteen joints means fourteen motor drivers and fourteen encoder channels, and the board has to supply current to all of them without the switching noise from the motor side corrupting the encoder counts on the signal side.</p>
           <ul>
-            <li>Designed and assembled custom PCBs for the encoder-equipped DC motors at each joint.</li>
-            <li>Used I²C for low-latency communication between the distributed microcontrollers.</li>
-            <li>CAD modelling of the chassis and joint linkages for the 14 DoF configuration.</li>
-            <li>Brought motor control, encoder feedback, and inter-controller messaging together in one framework.</li>
+            <li>Full design cycle owned end to end, schematic through bring-up.</li>
+            <li>Motor and encoder selection matched to the torque and resolution each joint needed.</li>
+            <li>Power and signal separation so encoder feedback stays trustworthy under load.</li>
           </ul>
-          <div class="callout">// architecture: distributed I²C controllers · encoder feedback · 14 DoF</div>
+        </section>
+
+        <section>
+          <h2>Wiring a machine that <em>moves</em>.</h2>
+          <p>I designed the <strong>wire routing and harness layout</strong>, which on a walking robot is a real constraint rather than an afterthought. Every cable crossing a joint flexes each time that joint moves, and a biped does that continuously. Route it badly and the failure is not immediate, it is a conductor that work-hardens and opens up three weeks later during a demo.</p>
+          <ul>
+            <li>Harness routed so cables cross joints at low-flex paths rather than the outside of the bend.</li>
+            <li>Strain relief at every connector, because the connector is where a moving harness fails first.</li>
+            <li>Runs bundled and constrained so nothing snags on the structure through the gait cycle.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Distributed control over <em>I²C</em>.</h2>
+          <p>Fourteen joints are more than one controller handles comfortably, so control is distributed across multiple microcontrollers talking over <strong>I²C</strong>. That keeps the wiring to two shared lines instead of a dedicated bus per controller, at the cost of having to be careful about addressing, pull-ups, and bus length as the robot grew.</p>
+          <div class="callout">// 14 DoF · distributed I²C controllers · encoder feedback at every joint</div>
         </section>
       </div>
     </div>
@@ -163,7 +181,7 @@
           <img src="../Prosthetics/Pro-1.jpeg" alt="Prosthetic limb" loading="lazy">
           <div class="up-next-info">
             <div class="up-next-cat">Assistive Robotics</div>
-            <div class="up-next-title">Smart Prosthetic Limb</div>
+            <div class="up-next-title">Tendon-Driven Prosthetic Hand</div>
           </div>
         </a>
         <a href="bio.html" class="up-next-card">
@@ -188,18 +206,18 @@
           <ul class="footer-links">
             <li><a href="https://www.linkedin.com/in/goswamijay/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
             <li><a href="mailto:goswami.j@northeastern.edu">goswami.j@northeastern.edu</a></li>
-            <li><a href="../Jaykumar_Goswami_Resume_Robotics.pdf">Résumé (PDF) ↗</a></li>
+            <li><a href="../Jaykumar_Goswami_Resume.pdf">Résumé (PDF) ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>More Projects</h4>
           <ul class="footer-links">
-            <li><a href="asrs.html">Development of ASRS</a></li>
+            <li><a href="asrs.html">Telescopic ASRS</a></li>
             <li><a href="sm.html">Smart Manufacturing Kit</a></li>
             <li><a href="printer.html">3D Printer Digital Twin</a></li>
             <li><a href="isro.html">ISRO Digital Twin</a></li>
             <li><a href="bio.html">Bio-Inspired Gripper</a></li>
-            <li><a href="pros.html">Prosthetic Limb</a></li>
+            <li><a href="pros.html">Prosthetic Hand</a></li>
             <li><a href="ros.html">Janitorial Robot (ROS)</a></li>
           </ul>
         </div>

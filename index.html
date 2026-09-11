@@ -46,16 +46,16 @@
     <div class="nav-inner">
       <a href="#top" class="logo"><span class="logo-dot"></span>Jay Goswami</a>
       <div class="nav-hud">
-        <span>SYS: <span class="ok">ONLINE</span></span>
-        <span>LAT: <span class="ok">~12ms</span></span>
-        <span id="hud-time">--:--:--</span>
+        <!-- <span>SYS: <span class="ok">ONLINE</span></span> -->
+        <!-- <span>LAT: <span class="ok">~12ms</span></span> -->
+        <!-- <span id="hud-time">--:--:--</span> -->
       </div>
       <div class="nav-links">
         <a href="#work">Work</a>
-        <a href="#capabilities">Capabilities</a>
+        <!-- <a href="#capabilities">Capabilities</a> -->
         <a href="mailto:goswami.j@northeastern.edu">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <a href="Jaykumar_Goswami_Resume_Robotics.pdf" class="nav-cv">Resume</a>
+        <a href="Jaykumar_Goswami_Resume.pdf" class="nav-cv">Resume</a>
       </div>
     </div>
   </nav>
@@ -85,12 +85,12 @@
 
       <!-- Decorative HUD readouts. The coordinates below are the lat/lon of
            Northeastern University, Boston. Edit if you move. -->
-      <div class="hero-coord tl">[COORD] LAT: <span class="accent">42.3398°N</span> · LON: <span class="accent">71.0892°W</span></div>
-      <div class="hero-coord br">REV.A · <span class="accent">v2.6.0</span> · build_2026.05</div>
+      <!-- <div class="hero-coord tl">[COORD] LAT: <span class="accent">42.3398°N</span> · LON: <span class="accent">71.0892°W</span></div> -->
+      <!-- <div class="hero-coord br">REV.A · <span class="accent">v2.6.0</span> · build_2026.05</div> -->
 
       <div class="wrap hero-grid">
         <div>
-          <div class="status-pill"><span class="status-dot"></span>Open to robotics &amp; mechatronics roles · Boston, MA</div>
+          <div class="status-pill"><span class="status-dot"></span>Open to robotics &amp; mechatronics roles · Boston, MA · open to relocate</div>
           <h1>Jay<br>Goswami<span class="accent">.</span></h1>
           <p class="hero-lede">
             <strong>Mechatronics and robotics engineer.</strong>
@@ -99,7 +99,7 @@
           </p>
           <div class="hero-cta">
             <a href="#work" class="btn btn-primary">See what I've built <span class="arrow">↓</span></a>
-            <a href="Jaykumar_Goswami_Resume_Robotics.pdf" class="btn btn-ghost">Download Resume <span class="arrow">↗</span></a>
+            <a href="Jaykumar_Goswami_Resume.pdf" class="btn btn-ghost">Download Resume <span class="arrow">↗</span></a>
           </div>
         </div>
         <div class="hero-portrait">
@@ -113,8 +113,8 @@
       <div class="marquee-track" id="marquee-track"></div>
     </div>
 
-    <!-- Capabilities strip — mechatronic disciplines -->
-    <section class="section" id="capabilities" style="padding-bottom:0;">
+    <!-- Capabilities strip - mechatronic disciplines -->
+    <!-- <section class="section" id="capabilities" style="padding-bottom:0;">
       <div class="wrap">
         <div class="section-header">
           <div>
@@ -163,7 +163,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Engineering ruler divider -->
     <div class="wrap" style="margin-top:5rem;"><hr class="ruler"></div>
@@ -201,7 +201,7 @@
           <ul class="footer-links">
             <li><a href="https://www.linkedin.com/in/goswamijay/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
             <li><a href="mailto:goswami.j@northeastern.edu">goswami.j@northeastern.edu</a></li>
-            <li><a href="Jaykumar_Goswami_Resume_Robotics.pdf">Résumé (PDF) ↗</a></li>
+            <li><a href="Jaykumar_Goswami_Resume.pdf">Résumé (PDF) ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -216,31 +216,81 @@
       </div>
 
       <div class="footer-build">
-        <span class="accent">●</span> BASED IN BOSTON, MA &nbsp; · &nbsp; 10 PROJECTS &nbsp; · &nbsp; v2.7
+        <span class="accent">●</span> BASED IN BOSTON, MA &nbsp; · &nbsp; 11 PROJECTS &nbsp; · &nbsp; v2.7
       </div>
     </div>
   </footer>
 
   <script>
     // ════════════════════════════════════════════════════════════════
-    //  PROJECTS — Edit this array to add, remove, or update projects.
+    //  PROJECTS - Edit this array to add, remove, or update projects.
     //  Each object becomes a project card on the page.
     //
     //  Fields:
-    //    title       (string)    — main project name
-    //    category    (string)    — small label above the title
-    //    description (string)    — 1-2 sentence summary
-    //    image       (string)    — path to image inside this folder
-    //    link        (string)    — path to the project's case-study page
-    //    tags        (string[])  — tech/skill chips shown under description
-    //    year        (string)    — optional, shown in the meta row
-    //    code        (string)    — optional, short code shown on hover badge (e.g. "ASR-01")
+    //    title       (string)    - main project name
+    //    category    (string)    - small label above the title
+    //    description (string)    - 1-2 sentence summary
+    //    image       (string)    - path to image inside this folder
+    //    link        (string)    - path to the project's case-study page
+    //    tags        (string[])  - tech/skill chips shown under description
+    //    year        (string)    - optional, shown in the meta row
+    //    code        (string)    - optional, short code shown on hover badge (e.g. "ASR-01")
     //  Order in this array = order on the page.
     // ════════════════════════════════════════════════════════════════
     //  The first FEATURED_COUNT projects show by default on the home page;
     //  the rest are revealed by the "Show all work" button. Reorder freely.
     const FEATURED_COUNT = 6;
     const PROJECTS = [
+      {
+        title: 'Motorized Back Exoskeleton',
+        category: 'MS Thesis · Wearable Robotics',
+        description: 'A powered back exoskeleton for industrial fatigue reduction. Designed the full wearable mechanical system in SolidWorks, back frame, ergonomic harness, actuator mounts and cable routing, adapted a cable-driven actuator for lifting loads with torque analysis and motor sizing, and built the three benchtop rigs that characterized it.',
+        image: 'exo/hero-wearing.jpg',
+        link: 'pages/exo.html',
+        tags: ['SolidWorks', 'Wearable Robotics', 'Actuator Characterization', 'Motor Sizing', 'Test Rig Design', 'Sensor Fusion'],
+        year: '2026',
+        code: 'EXO-11'
+      },
+      {
+        title: '14 DoF Bi-Pedal Robot',
+        category: 'Electronics & Embedded · Humanoid Robotics',
+        description: 'Owned the electronics for a 14 DoF biped: a custom PCB taken from schematic capture through board layout and bring-up, DC motor and encoder integration across every joint, and a wiring harness laid out for a machine that never stops moving.',
+        image: 'Biped/b2.jpeg',
+        link: 'pages/biped.html',
+        tags: ['PCB Design', 'Motor & Encoder Integration', 'Harness Layout', 'I²C', 'Embedded', 'Bring-up'],
+        year: '2022',
+        code: 'BPD-08'
+      },
+      {
+        title: 'Two-Stage Telescopic ASRS',
+        category: 'Mechanical Design · Warehouse Automation',
+        description: 'Owned the mechanical architecture of an Automated Storage and Retrieval System. A two-stage telescopic mast driven by one motor through a rack and pinion, with 2:1 chain reeving doubling the carriage travel, taken through FEA, tolerance analysis and DFM to production handoff.',
+        image: 'ASRS/Main view.jpeg',
+        link: 'pages/asrs.html',
+        tags: ['Mechanism Design', 'Power Transmission', 'FEA', 'Tolerance Analysis', 'DFM', 'Linear Guides'],
+        year: '2024',
+        code: 'ASR-01'
+      },
+      {
+        title: 'Tendon-Driven Prosthetic Hand',
+        category: 'Mechanical Design · Assistive Robotics',
+        description: 'A five-digit prosthetic hand I designed and fabricated from scratch. Tendon-driven fingers with passive spring return, printed in ABS, 22% lighter than v1. Holds a 400 mL glass of water unassisted.',
+        image: 'Prosthetics/Pro-1.jpeg',
+        link: 'pages/pros.html',
+        tags: ['Mechanical Design', 'Fusion 360', 'Tendon Drive', 'DFM', '3D Printing', 'PCB'],
+        year: '2022',
+        code: 'PRS-06'
+      },
+      {
+        title: 'Bio-Inspired Robot Gripper',
+        category: 'Mechanical Design · Industrial Robotics',
+        description: 'A two-finger end effector for an ABB arm handling a payload that deforms if you grip it too hard. FEM validated, topology optimized to 40% less mass, and simulated through a full pick-and-place cycle in RobotStudio.',
+        image: 'Bio/Bio-4.jpeg',
+        link: 'pages/bio.html',
+        tags: ['End Effector Design', 'FEM', 'Topology Optimization', 'ABB RobotStudio', 'Fusion 360'],
+        year: '2023',
+        code: 'BIO-05'
+      },
       {
         title: 'Biotech Instrumentation @ Breaking Inc.',
         category: 'Mechatronics · Biotech Hardware',
@@ -250,6 +300,16 @@
         tags: ['Embedded', 'Optical Sensing', 'Closed-loop Control', 'Thermal Design'],
         year: '2025',
         code: 'BRK-09'
+      },
+      {
+        title: 'Smart Manufacturing Kit',
+        category: 'Industrial Automation',
+        description: 'A training kit that puts real PLCs, HMIs, and IIoT in front of students by simulating an actual factory line, minus the real-world downtime.',
+        image: 'SM/SM_72.jpeg',
+        link: 'pages/sm.html',
+        tags: ['PLC', 'HMI', 'IIoT', 'Training'],
+        year: '2023',
+        code: 'SMK-02'
       },
       {
         title: 'Navigation & SLAM',
@@ -262,36 +322,6 @@
         code: 'NAV-10'
       },
       {
-        title: '14 DoF Bi-Pedal Robot',
-        category: 'Humanoid Research',
-        description: 'A 14 DoF bipedal robot built to copy human walking. Designed the custom PCB for the encoder motors and ran I²C across multiple controllers. Walking, it turns out, is a hard problem.',
-        image: 'Biped/b2.jpeg',
-        link: 'pages/biped.html',
-        tags: ['PCB Design', 'I²C', 'Locomotion', 'Embedded'],
-        year: '2022',
-        code: 'BPD-08'
-      },
-      {
-        title: 'Smart Upper Prosthetic Limb',
-        category: 'Assistive Robotics · State-level',
-        description: 'An IoT prosthetic hand that handles everyday tasks and sends back tactile feedback, with a companion web app for upkeep. It earned a design patent along the way.',
-        image: 'Prosthetics/Pro-1.jpeg',
-        link: 'pages/pros.html',
-        tags: ['IoT', 'sEMG', 'Tactile Sensing', 'PCB', 'Neural Net'],
-        year: '2022',
-        code: 'PRS-06'
-      },
-      {
-        title: 'Development of ASRS',
-        category: 'Warehouse Automation',
-        description: 'Designed an Automated Storage and Retrieval System to take the manual lifting out of warehouse handling, owning the mechanical architecture from concept through FEA and DFM.',
-        image: 'ASRS/Main view.jpeg',
-        link: 'pages/asrs.html',
-        tags: ['PLC', 'HMI', 'IIoT', 'CAD', 'OPC UA'],
-        year: '2024',
-        code: 'ASR-01'
-      },
-      {
         title: 'Digital Twin of Thermo-Vacuum Chamber',
         category: 'Digital Twin · ISRO',
         description: "Built ISRO's first digital twin of a thermo-vacuum chamber and quantum payload, with real-time IoT data and a remote AR app. Yes, that ISRO.",
@@ -300,26 +330,6 @@
         tags: ['Unity', 'AR/VR', 'IoT', 'HoloLens', 'C#'],
         year: '2023-24',
         code: 'TVC-04'
-      },
-      {
-        title: 'Bio-Inspired Robot Gripper',
-        category: 'Industrial Robotics',
-        description: 'A bio-inspired gripper for an industrial cake line, with FEM analysis, topology optimization, and assembly simulation in ABB RobotStudio. Robots and cake, together at last.',
-        image: 'Bio/Bio-4.jpeg',
-        link: 'pages/bio.html',
-        tags: ['FEM', 'Topology Opt.', 'ABB Robot Studio'],
-        year: '2023',
-        code: 'BIO-05'
-      },
-      {
-        title: 'Smart Manufacturing Kit',
-        category: 'Industrial Automation',
-        description: 'A training kit that puts real PLCs, HMIs, and IIoT in front of students by simulating an actual factory line, minus the real-world downtime.',
-        image: 'SM/SM_72.jpeg',
-        link: 'pages/sm.html',
-        tags: ['PLC', 'HMI', 'IIoT', 'Training'],
-        year: '2023',
-        code: 'SMK-02'
       },
       {
         title: 'Digital Twin of 3D Printer',
@@ -345,13 +355,14 @@
 
     // Optional: keywords scrolled across the marquee strip.
     const MARQUEE_KEYWORDS = [
-      'Robotics', 'ROS2', 'SLAM', 'Sensor Fusion', 'PCB Design', 'KiCad',
-      'Embedded Systems', 'CAD', 'GD&T', 'Control Systems', 'Mechatronics',
-      'Autonomous Navigation', 'PLC', 'IIoT', 'OPC UA', 'Digital Twin'
+      'SolidWorks', 'Mechanism Design', 'Actuator Design', 'Power Transmission',
+      'FEA', 'Tolerance Stack-Up', 'DFM', 'Cable Drives', '3D Printing',
+      'CNC Machining', 'Rapid Prototyping', 'PCB Design', 'Embedded Systems',
+      'Mechatronics', 'Control Systems', 'ROS2', 'Sensor Fusion', 'Robotics'
     ];
 
     // ────────────────────────────────────────────────────────────────
-    // Renderers — usually no need to touch anything below.
+    // Renderers - usually no need to touch anything below.
     // ────────────────────────────────────────────────────────────────
     function renderProjects() {
       const grid = document.getElementById('projects-grid');

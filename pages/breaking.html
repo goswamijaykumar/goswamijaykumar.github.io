@@ -42,7 +42,7 @@
         <a href="../index.html#work">Work</a>
         <a href="mailto:goswami.j@northeastern.edu">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <a href="../Jaykumar_Goswami_Resume_Robotics.pdf" class="nav-cv">Download CV</a>
+        <a href="../Jaykumar_Goswami_Resume.pdf" class="nav-cv">Download CV</a>
       </div>
     </div>
   </nav>
@@ -51,7 +51,7 @@
     <div class="wrap project-page-hero">
       <a href="../index.html#work" class="back-link"><span class="arrow">←</span> All work</a>
       <div class="project-page-meta">
-        <span class="accent">[01]</span>
+        <span class="accent">[06]</span>
         <span class="sep"></span>
         <span>Mechatronics · Biotech Hardware</span>
         <span class="sep"></span>
@@ -61,9 +61,9 @@
       </div>
       <h1 class="project-page-title">Biotech <em>Instrumentation</em>.</h1>
       <p class="project-page-summary">
-        Six months as a mechatronics intern, building lab hardware from scratch. An
-        optical-sensing device with embedded <strong>closed-loop control</strong>, and a
-        precision <strong>heat chamber</strong> for plastic-degradation studies.
+        Six months building lab hardware from scratch. A precision <strong>heat chamber</strong>
+        held to <strong>±0.5 °C</strong> across repeated cycles, and an optical-sensing device with
+        embedded <strong>closed-loop control</strong> at ±0.02 OD₆₀₀.
       </p>
     </div>
 
@@ -88,11 +88,11 @@
         </div>
         <div class="spec">
           <div class="spec-label">Domain</div>
-          <div class="spec-value">Biotech Hardware<br><span class="muted">Lab instrumentation</span></div>
+          <div class="spec-value">Thermal design<br><span class="muted">±0.5 °C stability</span></div>
         </div>
         <div class="spec">
           <div class="spec-label">Stack</div>
-          <div class="spec-value">Embedded · Control<br><span class="muted">Optical sensing · Thermal</span></div>
+          <div class="spec-value">Thermal · Embedded<br><span class="muted">Optical sensing · Control</span></div>
         </div>
       </div>
     </div>
@@ -106,21 +106,23 @@
         </section>
 
         <section>
+          <h2>Precision <em>heat chamber</em>.</h2>
+          <p>A degradation study is only as good as the temperature it ran at. If the chamber drifts, every data point inherits the drift, so the requirement was not "gets hot" but <strong>holds a setpoint, everywhere inside, for as long as the study runs</strong>.</p>
+          <p>I owned it from material selection through validation: chose the materials, designed the <strong>enclosure geometry</strong> for thermal mass and insulation, and validated <strong>thermal stability at ±0.5 °C across repeated test cycles</strong>.</p>
+          <ul>
+            <li><strong>Material selection</strong> for the operating range and for how the enclosure stores and sheds heat.</li>
+            <li><strong>Enclosure geometry</strong> worked for uniformity, so the specimen sees the setpoint rather than a gradient between a hot wall and a cold one.</li>
+            <li><strong>Validation across repeated cycles</strong>, not a single run. Repeatability is what a study actually depends on.</li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Optical-sensing <em>device</em>.</h2>
           <p>I built the device from a blank page, pairing <strong>optical sensing</strong> with embedded control. After a good number of prototype cycles, the closed-loop system held <strong>±0.02 OD₆₀₀ accuracy</strong>, tight enough to trust the readings.</p>
           <ul>
             <li>Optical front-end paired with microcontroller-based acquisition and control.</li>
             <li>Closed-loop control algorithms for stable, repeatable readings.</li>
             <li>A tight prototyping loop (design, build, measure, refine) on the way to a lab-ready unit.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Precision <em>heat chamber</em>.</h2>
-          <p>I engineered a precision heat chamber for plastic-degradation studies. I picked the materials, designed the enclosure geometry, and validated <strong>thermal stability at ±0.5 °C</strong> across repeated test cycles.</p>
-          <ul>
-            <li>Material selection and enclosure geometry for uniform, stable heating.</li>
-            <li>Thermal validation across repeated cycles to confirm ±0.5 °C stability.</li>
           </ul>
         </section>
 
@@ -182,7 +184,7 @@
           <img src="../Prosthetics/Pro-1.jpeg" alt="Prosthetic limb" loading="lazy">
           <div class="up-next-info">
             <div class="up-next-cat">Assistive Robotics</div>
-            <div class="up-next-title">Smart Prosthetic Limb</div>
+            <div class="up-next-title">Tendon-Driven Prosthetic Hand</div>
           </div>
         </a>
       </div>
@@ -200,7 +202,7 @@
           <ul class="footer-links">
             <li><a href="https://www.linkedin.com/in/goswamijay/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
             <li><a href="mailto:goswami.j@northeastern.edu">goswami.j@northeastern.edu</a></li>
-            <li><a href="../Jaykumar_Goswami_Resume_Robotics.pdf">Résumé (PDF) ↗</a></li>
+            <li><a href="../Jaykumar_Goswami_Resume.pdf">Résumé (PDF) ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -208,8 +210,8 @@
           <ul class="footer-links">
             <li><a href="navigation.html">Navigation &amp; SLAM</a></li>
             <li><a href="biped.html">14 DoF Bi-Pedal Robot</a></li>
-            <li><a href="pros.html">Prosthetic Limb</a></li>
-            <li><a href="asrs.html">Development of ASRS</a></li>
+            <li><a href="pros.html">Prosthetic Hand</a></li>
+            <li><a href="asrs.html">Telescopic ASRS</a></li>
             <li><a href="isro.html">ISRO Digital Twin</a></li>
           </ul>
         </div>

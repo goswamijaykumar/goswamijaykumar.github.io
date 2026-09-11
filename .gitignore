@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Source media kept local only: originals are large, and the video exceeds
+# GitHub's 100 MB per-file limit (the push would be rejected).
+exo/*.MOV
+exo/*.mov
+exo/Me_wearing*.jpeg
+exo/full back exo*.jpeg
+exo/old back exo V1.jpeg
+exo/zoomed in version*.jpeg
+exo/Actuator.jpeg
+
+# EMBARGOED until IEEE RA-L submission 26-0580.1 publishes.
+# Both show the cam/spring mechanism clearly. Committing them would make them
+# publicly downloadable even though no page links to them. Remove these two
+# lines once the paper is out.
+exo/actuator.jpg
+exo/upper-plate.jpg
